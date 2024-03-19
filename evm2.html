@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian EVM Simulation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #evm-container {
+      margin: 50px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div id="evm-container">
+  <h2>Indian EVM Simulation</h2>
+  <button class="button" onclick="vote('PartyA')">Vote for BJP <img src="https://seeklogo.com/images/B/bjp-bhartiya-janta-party-logo-48FE892291-seeklogo.com.png" width="30" height="30"/></button>
+  <button class="button" onclick="vote('PartyB')">Vote for CONGRESS <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Indian_National_Congress_hand_logo.png" width="30" height="30"/></button>
+  <button class="button" onclick="vote('PartyC')">Vote for RJD <img src="https://allpngfree.com/apf-prod-storage-api/storage/thumbnails/rjd-logo-png-images-thumbnail-1646991440.jpg" width="30" height="30"/></button>
+  <div id="result"></div>
+</div>
+
+<script>
+  let partyAVotes = 0;
+  let partyBVotes = 0;
+  let partyCVotes = 0;
+
+  function vote(party) {
+    switch (party) {
+      case 'PartyA':
+        partyAVotes++;
+        break;
+      case 'PartyB':
+        partyAVotes++;
+        break;
+      case 'PartyC':
+        partyAVotes++;
+        break;
+    }
+    displayResult();
+  }
+
+  function displayResult() {
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `Party BJP: ${partyAVotes} votes<br>Party CONGRESS: ${partyBVotes} votes<br>Party RJD: ${partyCVotes} votes`;
+  }
+</script>
+
+</body>
+</html>
